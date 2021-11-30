@@ -68,9 +68,9 @@ Um Professor é uma superclasse de usuário. Pode fazer tudo que um aluno faz co
 
 . (G) Informa usuários cadastrados sobre a impossibilidade de tomarem novos empréstimos devido à pendências (dívidas ou títulos perdidos).
 
-. (H) Permite o tratamento de perdas ( como ??? )
+. (H) Permite o tratamento de perdas, fornecendo ao usuário a opção de informar a perda. A partir disso, um formulário de reposição deve ser preenchido e o usuário terá até 30 dias para repor o título. Caso a reposição não ocorra, o usuário terá sua conta bloqueada do sistema.
 
-. (I) Apoiar o controle de assinatura de periódicos ( como ??? )
+. (I) Apoiar o controle de assinatura de periódicos, exibindo as assinaturas feitas, o período contratado e o período restante, além do valor a ser pago pelas mesmas.
 
 ### Restrições (O que o sistema não faz)
 
