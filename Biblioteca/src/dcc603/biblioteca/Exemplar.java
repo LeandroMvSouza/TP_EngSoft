@@ -19,7 +19,7 @@ public class Exemplar extends Title {
     private boolean isLoaned;
     private boolean isLost;
 
-    // loan_countdown > title->loanPeriod ? TRUE : FALSE;
+    // daysLoaned > title->loanPeriod ? TRUE : FALSE;
     private boolean isLate;
 
     // daysInReserve > 6 title->reservePeriod ? FALSE : TRUE;
