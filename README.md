@@ -9,16 +9,16 @@ títulos, para que sejam consultados apenas na biblioteca durante a oferta de um
 
 Série de tarefas a serem realizadas, sendo a ordem de implementação de cima pra baixo. O desenvolvimento é incremental, com determinadas tarefas podendo ou não depender de alguma anterior.
 
-| Tarefa                                              | Status       | Cobertura de Testes | Responsáveis |
-|-----------------------------------------------------|--------------|---------------------|--------------|
-| Criar estruturas de dados iniciais                  | Em progresso | N/A                 | Leandro      |
-| Criar "banco de dados" com títulos e exemplares     |              |                     |              |
-| Implementar método que lista itens do acervo        |              |                     |              |
-| Implementar sistema de cadastro e login de usuários |              |                     |              |
-| Implementar métodos específicos para usuários       |              |                     |              |
-| Implementar métodos específicos para professores    |              |                     |              |
-| Implementar o tratamento de perdas (requisito H)    |              |                     |              |
-| Implementar o controle de assinaturas (requisito I) |              |                     |              |
+| Tarefa                                              | Status       | Cobertura de Testes | Responsáveis | Comentários |
+|-----------------------------------------------------|--------------|---------------------|--------------|-------------|
+| Criar estruturas de dados iniciais                  | Feito        | N/A                 | Leandro      | Falta criar suporte para requisitos I e H |
+| Criar "banco de dados" com títulos e exemplares     |              |                     |              | |
+| Implementar método que lista itens do acervo        |              |                     |              | |
+| Implementar sistema de cadastro e login de usuários |              |                     |              | |
+| Implementar métodos específicos para usuários       |              |                     |              | |
+| Implementar métodos específicos para professores    |              |                     |              | |
+| Implementar o tratamento de perdas (requisito H)    |              |                     |              | |
+| Implementar o controle de assinaturas (requisito I) |              |                     |              | |
 
 ## Requisitos
 
@@ -81,8 +81,13 @@ Série de tarefas a serem realizadas, sendo a ordem de implementação de cima p
           da mesma obra literária/periódico.
       }
 
-      public class Exemplar extends Title {
-
+      public class Exemplar {
+        * Um exemplar é uma unidade atômica de um título.
+        * 
+        * Por exemplo:
+        *  - Senhor dos Aneis e a Sociedade do Anel é um título X
+        *    X->exemplars[0] é o primeiro exemplar
+        *    X->exemplars[1] é o segundo exemplar
       }
 
 *  (C) Permite a consulta do acervo disponível por qualquer usuário, seja ele cadastrado ou não. O sistema deverá informar a quantidade de exemplares disponíveis e se o título em questão está reservado ou não.
