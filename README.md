@@ -1,13 +1,24 @@
 # TP_EngSoft
 
-Tema 8 Gestão de Biblioteca
+Tema 8 - Gestão de Biblioteca
 
-O sistema deve dar apoio à gestão de uma biblioteca escolar. Os títulos da biblioteca podem ser livros,
-periódicos e outros. Cada título tem um número de exemplares, um período máximo de empréstimo e
-uma descrição. Um título só pode ser emprestado a leitores cadastrados, que pagarão multas se
-ultrapassarem o período de empréstimo. Professores cadastrados podem pedir que determinados
-títulos, para que sejam consultados apenas na biblioteca durante a oferta de uma disciplina. O produto
-deve permitir o tratamento de perdas e dar apoio ao controle de assinaturas de periódicos.
+O sistema deve dar apoio à gestão de uma biblioteca escolar. Os títulos da biblioteca podem ser livros, periódicos e outros. Cada título tem um número de exemplares, um período máximo de empréstimo e uma descrição. Um título só pode ser emprestado a leitores cadastrados, que pagarão multas se ultrapassarem o período de empréstimo. Professores cadastrados podem pedir que determinados
+títulos, para que sejam consultados apenas na biblioteca durante a oferta de uma disciplina. O produto deve permitir o tratamento de perdas e dar apoio ao controle de assinaturas de periódicos.
+
+## Roadmap
+
+Série de tarefas a serem realizadas, sendo a ordem de implementação de cima pra baixo. O desenvolvimento é incremental, com determinadas tarefas podendo ou não depender de alguma anterior.
+
+| Tarefa                                              | Status       | Cobertura de Testes | Responsáveis |
+|-----------------------------------------------------|--------------|---------------------|--------------|
+| Criar estruturas de dados iniciais                  | Em progresso | N/A                 | Leandro      |
+| Criar "banco de dados" com títulos e exemplares     |              |                     |              |
+| Implementar método que lista itens do acervo        |              |                     |              |
+| Implementar sistema de cadastro e login de usuários |              |                     |              |
+| Implementar métodos específicos para usuários       |              |                     |              |
+| Implementar métodos específicos para professores    |              |                     |              |
+| Implementar o tratamento de perdas (requisito H)    |              |                     |              |
+| Implementar o controle de assinaturas (requisito I) |              |                     |              |
 
 ## Requisitos
 
