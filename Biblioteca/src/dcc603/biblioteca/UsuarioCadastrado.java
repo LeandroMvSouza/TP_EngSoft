@@ -1,4 +1,5 @@
 package dcc603.biblioteca;
+import java.lang.*;
 
 public class UsuarioCadastrado {
 
@@ -9,6 +10,7 @@ public class UsuarioCadastrado {
 	}
 
 	//Atributos
+	int N = 5;
 	protected String nome;
 	protected String cpf;
 	protected Exemplar[] exemplaresEmprestados = new Exemplar[N];
@@ -16,7 +18,7 @@ public class UsuarioCadastrado {
 	protected boolean podeRealizarEmprestimo;
 
 	//Métodos
-	protected void realizarEmprestimo(exemplar exemplarAPegarEmprestado) {
+	protected void realizarEmprestimo(Exemplar exemplarAPegarEmprestado) {
 		if(exemplaresEmprestados.length < N && titulosPerdidos.length == 0 && podeRealizarEmprestimo) {
 			exemplaresEmprestados = append(exemplaresEmprestados, exemplarAPegarEmprestado);
 		}
