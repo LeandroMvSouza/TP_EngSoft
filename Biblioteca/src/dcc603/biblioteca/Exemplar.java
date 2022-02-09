@@ -1,9 +1,8 @@
 package dcc603.biblioteca;
-import java.util.ArrayList;
 
 /**
  * Um exemplar é uma unidade atômica de um título.
- * 
+ *
  * Por exemplo:
  *  - Senhor dos Aneis e a Sociedade do Anel é um título X
  *    X->exemplars[0] é o primeiro exemplar
@@ -11,71 +10,78 @@ import java.util.ArrayList;
  */
 
 public class Exemplar {
-    private boolean isLoaned = false;
-    private boolean isLost = false;
-    private int daysLoaned = 0;
-    private int daysInReserve = 0;
 
-    // daysLoaned > title->loanPeriod ? TRUE : FALSE;
-    private boolean isLate = false;
+	//Construtor
+	public Exemplar( boolean novoEmprestado, boolean novoPerdido, int novoDiasEmprestado, int novoDiasReservado, boolean novoEstaAtrasado, boolean novoEstaReservado) {
+		setEmprestado(novoEmprestado);
+		setPerdido(novoPerdido);
+		setDiasEmprestado(novoDiasEmprestado);
+		setEstaAtrasado(novoDiasReservado);
+		setEstaReservado(novoEstaAtrasado);
+		setExemplares(novoEstaReservado);
+	}
 
-    // daysInReserve > 6 title->reservePeriod ? FALSE : TRUE;
-    private boolean keptAsReserve = false;
+	//Atributos
+	protected boolean emprestado;
+	protected boolean perdido;
+	protected int diasEmprestado;
+	protected int diasReservado;
+	protected boolean estaAtrasado;
+	protected boolean estaReservado;
 
-    // ------------------Construtor-------------------------
-    // Todo exemplar é criado com variáveis padrão, à serem
-    // modificadas durante a execução do código.
-    public Exemplar() {}
+	//Métodos
+	protected void alterarStatus(boolean novoStatus) {
+		emprestado = novoStatus;
+	}
 
-	// -------------------Métodos---------------------------
+	//Sets
+	private void setEmprestado(boolean novoEmprestado) {
+		emprestado = novoEmprestado;
+	}
 
+	private void setPerdido(boolean novoPerdido) {
+		perdido = novoPerdido;
+	}
 
-    // -------------------Getter's/Setter's----------------
-    public boolean isLoaned() {
-        return isLoaned;
-    }
+	private void setDiasEmprestado(int novoDiasEmprestados) {
+		diasEmprestado = novoDiasEmprestados;
+	}
 
-    public void setLoaned(boolean isLoaned) {
-        this.isLoaned = isLoaned;
-    }
+	private void setEstaAtrasado(int novoDiasReservados) {
+		diasReservado = novoDiasReservados;
+	}
 
-    public boolean isLost() {
-        return isLost;
-    }
+	private void setEstaReservado(boolean novoEstaAtrasado) {
+		estaAtrasado = novoEstaAtrasado;
+	}
 
-    public void setLost(boolean isLost) {
-        this.isLost = isLost;
-    }
+	private void setExemplares(boolean novoEstaReservado) {
+		estaReservado = novoEstaReservado;
+	}
 
-    public int getDaysLoaned() {
-        return daysLoaned;
-    }
+	//Gets
+	public boolean getEmprestado() {
+		return emprestado;
+	}
 
-    public void setDaysLoaned(int daysLoaned) {
-        this.daysLoaned = daysLoaned;
-    }
+	public boolean getPerdido() {
+		return perdido;
+	}
 
-    public int getDaysInReserve() {
-        return daysInReserve;
-    }
+	public int getDiasEmprestado() {
+		return diasEmprestado;
+	}
 
-    public void setDaysInReserve(int daysInReserve) {
-        this.daysInReserve = daysInReserve;
-    }
+	public int getDiasReservado() {
+		return diasReservado;
+	}
 
-    public boolean isLate() {
-        return isLate;
-    }
+	public boolean getEstaAtrasado () {
+		return estaAtrasado;
+	}
 
-    public void setLate(boolean isLate) {
-        this.isLate = isLate;
-    }
+	public boolean getEstaReservado() {
+		return estaReservado;
+	}
 
-    public boolean isKeptAsReserve() {
-        return keptAsReserve;
-    }
-
-    public void setKeptAsReserve(boolean keptAsReserve) {
-        this.keptAsReserve = keptAsReserve;
-    }
 }

@@ -1,32 +1,26 @@
 package dcc603.biblioteca;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 /**
- * Um professor é superclasse de um usuário.
+ * Um professor é superclasse de um usuário cadastrado.
  */
 
-public class Professor extends User {
+public class Professor extends UsuarioCadastrado {
 
-    // Um professor pode reservar por 6 meses até N títulos. Além disso,
-	// um professor não pode reservar um título já reservado.
-    private ArrayList <Title> reservedTitles;
+	//Atributos
+	protected Titulo[] titulosReservados = new Titulo[N];
 
-    // ------------------Construtor-------------------------
-    public Professor(String name, String cpf, Title[] reservedTitles) {
-        super(name, cpf);
-        this.reservedTitles = new ArrayList<Title>();
-    }
+	//Métodos
+	protected void reservaTitulo(exemplar tituloASerReservado) {
+		titulosReservados = append(titulosReservados, tituloASerReservado);
+	}
 
-	// -------------------Métodos---------------------------
+	protected Titulo[] consultarTitulosReservados() {
+		return titulosReservados;
+	}
 
+	//Gets
+	public Titulo[] getTitulosReservados() {
+		return titulosReservados;
+	}
 
-	// -------------------Getter's/Setter's-----------------
-    public ArrayList<Title> getReservedTitles() {
-        return reservedTitles;
-    }
-
-    public void setReservedTitles(ArrayList<Title> reservedTitles) {
-        this.reservedTitles = reservedTitles;
-    }
 }
