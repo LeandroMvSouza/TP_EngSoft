@@ -69,7 +69,7 @@ public class UsuarioCadastrado {
 }
 
 
-public class Professor extends Usuario{
+public class Professor extends UsuarioCadastrado{
 
 	//Atributos
 	protected Titulo[] titulosReservados = new Titulo[N];
